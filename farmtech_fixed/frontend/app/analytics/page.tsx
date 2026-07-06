@@ -1,12 +1,32 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Header from '@/components/header'
 import SidebarNav from '@/components/sidebar-nav'
 import { useLanguage } from '@/lib/language-context'
+import {
+  ResponsiveContainer,
+  AreaChart,
+  Area,
+  LineChart,
+  Line,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+} from 'recharts'
 
 export default function AnalyticsPage() {
   const { t } = useLanguage()
   const L = t.analytics
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const metrics = [
     { label: L.totalYield, value: `2,450 ${L.tons}`, change: '+8.5%', status: 'up' },
     { label: L.avgEfficiency, value: '87%', change: '+3.2%', status: 'up' },
@@ -22,10 +42,6 @@ export default function AnalyticsPage() {
     { month: L.months[4], yield: 265, efficiency: 88, cost: 21000 },
     { month: L.months[5], yield: 290, efficiency: 87, cost: 22500 },
   ]
-
-  const maxYield = Math.max(...monthlyData.map(d => d.yield))
-  const maxEfficiency = 100
-  const maxCost = Math.max(...monthlyData.map(d => d.cost))
 
   return (
     <div className="flex h-dvh max-h-dvh w-full overflow-hidden bg-background">
@@ -54,48 +70,88 @@ export default function AnalyticsPage() {
           {/* Charts */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
             {/* Yield Chart */}
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 flex flex-col">
               <h3 className="text-lg font-semibold mb-4 text-foreground">{L.yieldTrend}</h3>
-              <div className="flex items-end gap-2 h-64">
-                {monthlyData.map((data, index) => (
-                  <div key={index} className="flex-1 flex flex-col items-center">
-                    <div className="w-full bg-gradient-to-t from-green-600 to-green-400 rounded-t" 
-                         style={{ height: `${(data.yield / maxYield) * 100}%` }}></div>
-                    <p className="text-xs text-muted-foreground mt-2">{data.month}</p>
-                    <p className="text-xs font-semibold text-foreground">{data.yield}</p>
-                  </div>
-                ))}
+              <div className="h-72 w-full flex items-center justify-center">
+                {mounted ? (
+                  <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart data={monthlyData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                      <defs>
+                        <linearGradient id="colorYield" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="#16a34a" stopOpacity={0.4}/>
+                          <stop offset="95%" stopColor="#16a34a" stopOpacity={0}/>
+                        </linearGradient>
+                      </defs>
+                      <CartesianGrid strokeDasharray="3 3" className="stroke-border/50" />
+                      <XAxis dataKey="month" stroke="currentColor" className="text-[10px] text-muted-foreground" />
+                      <YAxis stroke="currentColor" className="text-[10px] text-muted-foreground" />
+                      <Tooltip 
+                        contentStyle={{ backgroundColor: 'hsl(var(--card))', borderColor: 'hsl(var(--border))' }}
+                        labelStyle={{ color: 'hsl(var(--foreground))', fontWeight: 'bold' }}
+                        itemStyle={{ color: '#16a34a' }}
+                      />
+                      <Area type="monotone" dataKey="yield" stroke="#16a34a" strokeWidth={2} fillOpacity={1} fill="url(#colorYield)" />
+                    </AreaChart>
+                  </ResponsiveContainer>
+                ) : (
+                  <div className="h-10 w-10 animate-spin rounded-full border-4 border-muted border-t-green-600"></div>
+                )}
               </div>
             </div>
 
             {/* Efficiency Chart */}
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 flex flex-col">
               <h3 className="text-lg font-semibold mb-4 text-foreground">{L.farmEfficiency}</h3>
-              <div className="flex items-end gap-2 h-64">
-                {monthlyData.map((data, index) => (
-                  <div key={index} className="flex-1 flex flex-col items-center">
-                    <div className="w-full bg-gradient-to-t from-blue-600 to-blue-400 rounded-t" 
-                         style={{ height: `${(data.efficiency / maxEfficiency) * 100}%` }}></div>
-                    <p className="text-xs text-muted-foreground mt-2">{data.month}</p>
-                    <p className="text-xs font-semibold text-foreground">{data.efficiency}%</p>
-                  </div>
-                ))}
+              <div className="h-72 w-full flex items-center justify-center">
+                {mounted ? (
+                  <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={monthlyData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                      <CartesianGrid strokeDasharray="3 3" className="stroke-border/50" />
+                      <XAxis dataKey="month" stroke="currentColor" className="text-[10px] text-muted-foreground" />
+                      <YAxis stroke="currentColor" domain={[0, 100]} className="text-[10px] text-muted-foreground" />
+                      <Tooltip 
+                        contentStyle={{ backgroundColor: 'hsl(var(--card))', borderColor: 'hsl(var(--border))' }}
+                        labelStyle={{ color: 'hsl(var(--foreground))', fontWeight: 'bold' }}
+                        itemStyle={{ color: '#2563eb' }}
+                      />
+                      <Line type="monotone" dataKey="efficiency" stroke="#2563eb" strokeWidth={3} activeDot={{ r: 8 }} dot={{ r: 4 }} />
+                    </LineChart>
+                  </ResponsiveContainer>
+                ) : (
+                  <div className="h-10 w-10 animate-spin rounded-full border-4 border-muted border-t-blue-600"></div>
+                )}
               </div>
             </div>
           </div>
 
           {/* Cost Savings Chart */}
-          <div className="bg-card border border-border rounded-lg p-6 mb-6">
+          <div className="bg-card border border-border rounded-lg p-6 mb-6 flex flex-col">
             <h3 className="text-lg font-semibold mb-4 text-foreground">{L.monthlyCost}</h3>
-            <div className="flex items-end gap-2 h-64">
-              {monthlyData.map((data, index) => (
-                <div key={index} className="flex-1 flex flex-col items-center">
-                  <div className="w-full bg-gradient-to-t from-orange-600 to-orange-400 rounded-t" 
-                       style={{ height: `${(data.cost / maxCost) * 100}%` }}></div>
-                  <p className="text-xs text-muted-foreground mt-2">{data.month}</p>
-                  <p className="text-xs font-semibold text-foreground">EGP {data.cost / 1000}k</p>
-                </div>
-              ))}
+            <div className="h-72 w-full flex items-center justify-center">
+              {mounted ? (
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={monthlyData} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
+                    <defs>
+                      <linearGradient id="colorCost" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#ea580c" stopOpacity={0.8}/>
+                        <stop offset="95%" stopColor="#ea580c" stopOpacity={0.3}/>
+                      </linearGradient>
+                    </defs>
+                    <CartesianGrid strokeDasharray="3 3" className="stroke-border/50" />
+                    <XAxis dataKey="month" stroke="currentColor" className="text-[10px] text-muted-foreground" />
+                    <YAxis stroke="currentColor" className="text-[10px] text-muted-foreground" />
+                    <Tooltip 
+                      formatter={(value: any) => [`EGP ${value.toLocaleString()}`, L.monthlyCost]}
+                      contentStyle={{ backgroundColor: 'hsl(var(--card))', borderColor: 'hsl(var(--border))' }}
+                      labelStyle={{ color: 'hsl(var(--foreground))', fontWeight: 'bold' }}
+                      itemStyle={{ color: '#ea580c' }}
+                    />
+                    <Bar dataKey="cost" fill="url(#colorCost)" radius={[4, 4, 0, 0]} maxBarSize={50} />
+                  </BarChart>
+                </ResponsiveContainer>
+              ) : (
+                <div className="h-10 w-10 animate-spin rounded-full border-4 border-muted border-t-orange-600"></div>
+              )}
             </div>
             <p className="text-sm text-green-600 mt-4 font-semibold">{L.costReduction}: EGP 14,000 (33% {L.savings})</p>
           </div>
