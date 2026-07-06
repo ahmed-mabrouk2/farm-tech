@@ -47,3 +47,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Temp Deploy Folders
+hf_space_deploy/
