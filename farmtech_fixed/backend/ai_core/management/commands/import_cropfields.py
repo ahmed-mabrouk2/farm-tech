@@ -212,6 +212,9 @@ class Command(BaseCommand):
         self.stdout.write(f"  Total in DB: {CropField.objects.count():,}")
 
     def generate_mock_data(self, batch_size):
+        if CropField.objects.exists():
+            self.stdout.write(self.style.SUCCESS("✓ Data already exists in database. Skipping generation."))
+            return
         import random
         import uuid
         

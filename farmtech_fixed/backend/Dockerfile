@@ -28,4 +28,4 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 7860
 
 # Command to run database migrations and start Gunicorn on port 7860
-CMD python manage.py migrate && gunicorn config.wsgi:application --bind 0.0.0.0:7860
+CMD python manage.py migrate && python manage.py import_cropfields --mock && gunicorn config.wsgi:application --bind 0.0.0.0:7860
