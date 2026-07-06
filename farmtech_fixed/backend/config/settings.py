@@ -93,7 +93,15 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:80",
     "http://127.0.0.1:3000",
     "http://127.0.0.1:8001",
+    "https://ahmed-mabrouk22-farmtech-backend.hf.space",
+    "https://*.hf.space",
+    "https://*.huggingface.co",
 ]
+
+# ── Proxy / HTTPS settings for Hugging Face Spaces ───────────────────────────
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+USE_X_FORWARDED_HOST = True
+USE_X_FORWARDED_PORT = True
 
 # ── URLs / Templates / WSGI ───────────────────────────────────────────────────
 ROOT_URLCONF = "config.urls"
@@ -121,7 +129,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 #   1. DATABASE_URL env var  (Docker / Heroku style)
 #   2. DB_ENGINE=postgresql  only if psycopg2 is actually importable
 #   3. SQLite fallback       always works locally
-DATABASE_URL = os.getenv("DATABASE_URL", "")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres.ymjxxzihlhjmbhsmkygu:ABDO199218ABDO@aws-0-eu-west-3.pooler.supabase.com:5432/postgres")
 DB_ENGINE    = os.getenv("DB_ENGINE", "")
 
 def _use_postgres():
