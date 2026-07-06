@@ -1,0 +1,4 @@
+{
+  "bins": [0, 20, 40, 60, 80, 100],
+  "labels": ["Very Low", "Low", "Medium", "High", "Excellent"]
+}

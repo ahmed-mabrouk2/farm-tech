@@ -1,0 +1,23 @@
+{
+    "wheat": 25.0,
+    "rice": 20.0,
+    "maize": 22.0,
+    "barley": 20.0,
+    "potato": 4.0,
+    "tomato": 3.0,
+    "onion": 2.5,
+    "cucumber": 2.0,
+    "orange": 2.5,
+    "mango": 3.0,
+    "date": 2.0,
+    "grapes": 3.5,
+    "cotton": 45.0,
+    "sugarbeet": 4.0,
+    "sugarcane": 1.0,
+    "_comment_legumes": "Legumes fix atmospheric N. Low coefficient here reflects only supplemental demand. Response factor further suppresses synthetic N recommendation.",
+    "faba": 5.0,
+    "lentil": 4.0,
+    "chickpea": 4.5,
+    "clover": 3.0,
+    "default": 15.0
+}

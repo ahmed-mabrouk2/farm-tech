@@ -1,0 +1,92 @@
+Watching for file changes with StatReloader
+[2026-05-14 17:37:03,399] INFO django.utils.autoreload: Watching for file changes with StatReloader
+Performing system checks...
+
+[2026-05-14 17:37:48,169] INFO ai_core.services.model_loader: All model loaders initialized successfully
+[2026-05-14 17:37:48,175] INFO faiss.loader: Loading faiss with AVX512 support.
+[2026-05-14 17:37:48,176] INFO faiss.loader: Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+[2026-05-14 17:37:48,176] INFO faiss.loader: Loading faiss with AVX2 support.
+[2026-05-14 17:37:48,489] INFO faiss.loader: Successfully loaded faiss with AVX2 support.
+System check identified no issues (0 silenced).
+May 14, 2026 - 17:37:49
+Django version 4.2.10, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+Method Not Allowed: /api/ai/chatbot/
+[2026-05-14 17:39:47,888] WARNING django.request: Method Not Allowed: /api/ai/chatbot/
+[14/May/2026 17:39:47] "GET /api/ai/chatbot/ HTTP/1.1" 405 40
+[2026-05-14 17:39:49,926] INFO ai_core.services.model_loader: Loading C:\Users\HP\Desktop\farmtech_final_fixed\farmtech_fixed\backend\ai_core\ml_models\llm_model via AutoModelForImageTextToText...
+[transformers] The tokenizer you are loading from 'C:\Users\HP\Desktop\farmtech_final_fixed\farmtech_fixed\backend\ai_core\ml_models\llm_model' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/625 [00:00<?, ?it/s]Loading weights:   0%|          | 1/625 [00:01<15:00,  1.44s/it]Loading weights:  23%|##2       | 143/625 [00:01<00:03, 126.76it/s]Loading weights:  35%|###4      | 216/625 [00:04<00:08, 49.85it/s] Loading weights:  41%|####1     | 257/625 [00:04<00:06, 56.57it/s]Loading weights:  46%|####5     | 286/625 [00:05<00:06, 55.79it/s]Loading weights:  49%|####8     | 306/625 [00:05<00:06, 49.06it/s]Loading weights:  51%|#####1    | 321/625 [00:06<00:05, 53.80it/s]Loading weights:  54%|#####3    | 335/625 [00:06<00:04, 59.89it/s]Loading weights:  56%|#####6    | 350/625 [00:06<00:06, 39.59it/s]Loading weights:  58%|#####7    | 360/625 [00:07<00:06, 40.23it/s]Loading weights:  60%|######    | 375/625 [00:07<00:05, 49.61it/s]Loading weights:  68%|######7   | 422/625 [00:07<00:02, 95.17it/s]Loading weights:  71%|#######   | 443/625 [00:07<00:01, 108.12it/s]Loading weights:  74%|#######4  | 464/625 [00:07<00:01, 107.15it/s]Loading weights:  77%|#######7  | 484/625 [00:07<00:01, 104.43it/s]Loading weights:  80%|#######9  | 499/625 [00:08<00:01, 108.77it/s]Loading weights:  82%|########2 | 514/625 [00:08<00:01, 100.06it/s]Loading weights:  87%|########6 | 542/625 [00:08<00:00, 133.11it/s]Loading weights:  89%|########9 | 559/625 [00:08<00:00, 99.76it/s] Loading weights:  92%|#########1| 573/625 [00:08<00:00, 88.05it/s]Loading weights:  94%|#########4| 590/625 [00:08<00:00, 101.48it/s]Loading weights:  96%|#########6| 603/625 [00:09<00:00, 57.80it/s] Loading weights:  98%|#########8| 613/625 [00:09<00:00, 53.61it/s]Loading weights: 100%|#########9| 622/625 [00:09<00:00, 57.05it/s]Loading weights: 100%|##########| 625/625 [00:09<00:00, 63.36it/s]
+[2026-05-14 17:40:02,188] INFO ai_core.services.model_loader: \u2705 Chat model loaded via AutoModelForImageTextToText on cpu
+[2026-05-14 17:40:02,190] INFO ai_core.services.rag_knowledge: Downloading/Locating RAG index from Hub (Rady10/Agriculture-Rag-Data-Index)...
+[2026-05-14 17:40:02,662] INFO httpx: HTTP Request: GET https://huggingface.co/api/datasets/Rady10/Agriculture-Rag-Data-Index/revision/main "HTTP/1.1 200 OK"
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|##########| 4/4 [00:00<00:00, 90.61it/s]
+[2026-05-14 17:40:02,749] INFO ai_core.services.rag_knowledge: Loading FAISS index and chunks...
+[2026-05-14 17:40:02,870] INFO ai_core.services.rag_knowledge: Loading embedding model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+[2026-05-14 17:40:02,881] INFO sentence_transformers.base.model: No device provided, using cpu
+[2026-05-14 17:40:03,050] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[2026-05-14 17:40:03,110] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/modules.json "HTTP/1.1 200 OK"
+[2026-05-14 17:40:03,293] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[2026-05-14 17:40:03,294] WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[2026-05-14 17:40:03,356] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[2026-05-14 17:40:03,369] INFO sentence_transformers.base.model: Loading SentenceTransformer model from sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2.
+[2026-05-14 17:40:03,534] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[2026-05-14 17:40:03,595] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[2026-05-14 17:40:03,759] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[2026-05-14 17:40:03,820] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/README.md "HTTP/1.1 200 OK"
+[2026-05-14 17:40:04,018] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[2026-05-14 17:40:04,080] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/modules.json "HTTP/1.1 200 OK"
+[2026-05-14 17:40:04,259] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-05-14 17:40:04,322] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/sentence_bert_config.json "HTTP/1.1 200 OK"
+[2026-05-14 17:40:04,505] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[2026-05-14 17:40:04,678] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-05-14 17:40:04,740] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 3050.65it/s]
+[2026-05-14 17:40:05,647] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[2026-05-14 17:40:06,274] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[2026-05-14 17:40:06,598] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[2026-05-14 17:40:06,767] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[2026-05-14 17:40:06,931] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-05-14 17:40:06,994] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/tokenizer_config.json "HTTP/1.1 200 OK"
+[2026-05-14 17:40:07,254] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-05-14 17:40:07,313] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/config.json "HTTP/1.1 200 OK"
+[2026-05-14 17:40:07,479] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-05-14 17:40:07,539] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/config.json "HTTP/1.1 200 OK"
+[2026-05-14 17:40:07,711] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-05-14 17:40:07,770] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/tokenizer_config.json "HTTP/1.1 200 OK"
+[2026-05-14 17:40:07,936] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-05-14 17:40:07,996] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/tokenizer_config.json "HTTP/1.1 200 OK"
+[2026-05-14 17:40:08,162] INFO httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[2026-05-14 17:40:08,334] INFO httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[2026-05-14 17:40:10,944] INFO httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 "HTTP/1.1 200 OK"
+[2026-05-14 17:40:11,383] INFO httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-05-14 17:40:11,442] INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[2026-05-14 17:40:11,619] INFO httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 "HTTP/1.1 200 OK"
+[2026-05-14 17:40:11,625] INFO ai_core.services.rag_knowledge: RAG index loaded: 3390 vectors, 3390 chunks
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00,  4.76it/s]Batches: 100%|##########| 1/1 [00:00<00:00,  4.75it/s]
+[transformers] The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00,  6.04it/s]Batches: 100%|##########| 1/1 [00:00<00:00,  6.03it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00,  2.58it/s]Batches: 100%|##########| 1/1 [00:00<00:00,  2.58it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:03<00:00,  3.28s/it]Batches: 100%|##########| 1/1 [00:03<00:00,  3.28s/it]
+Bad Request: /api/ai/chatbot/
+[2026-05-14 17:46:22,791] WARNING django.request: Bad Request: /api/ai/chatbot/
+[14/May/2026 17:46:22] "POST /api/ai/chatbot/ HTTP/1.1" 400 97
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:02<00:00,  2.36s/it]Batches: 100%|##########| 1/1 [00:02<00:00,  2.36s/it]
+Bad Request: /api/ai/chatbot/
+[2026-05-14 17:46:43,840] WARNING django.request: Bad Request: /api/ai/chatbot/
+[14/May/2026 17:46:43] "POST /api/ai/chatbot/ HTTP/1.1" 400 97
+Method Not Allowed: /api/ai/chatbot/
+[2026-05-14 17:48:07,464] WARNING django.request: Method Not Allowed: /api/ai/chatbot/
+[14/May/2026 17:48:07] "GET /api/ai/chatbot/ HTTP/1.1" 405 40
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:02<00:00,  2.40s/it]Batches: 100%|##########| 1/1 [00:02<00:00,  2.40s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00,  1.94it/s]Batches: 100%|##########| 1/1 [00:00<00:00,  1.94it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00,  1.62it/s]Batches: 100%|##########| 1/1 [00:00<00:00,  1.62it/s]
+Method Not Allowed: /api/ai/chatbot/
+[2026-05-14 18:54:58,414] WARNING django.request: Method Not Allowed: /api/ai/chatbot/
+[14/May/2026 18:54:58] "GET /api/ai/chatbot/ HTTP/1.1" 405 40
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:10<00:00, 10.20s/it]Batches: 100%|##########| 1/1 [00:10<00:00, 10.20s/it]

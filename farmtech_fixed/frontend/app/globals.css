@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* FarmTec Agricultural Color Palette - Light Mode */
+  --background: #f9faf7; /* Soft cream background */
+  --foreground: #1f2317; /* Deep earth brown text */
+  --card: oklch(1 0 0); /* Pure white cards */
+  --card-foreground: #1f2317;
+  --popover: oklch(1 0 0);
+  --popover-foreground: #1f2317;
+  --primary: #2d7a3e; /* Agricultural Green */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: #6b5b45; /* Earth Brown */
+  --secondary-foreground: oklch(1 0 0);
+  --muted: #e8ebe5;
+  --muted-foreground: #7a8471;
+  --accent: #4caf50; /* Field Green */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: #e0e4db;
+  --input: #fafbf8;
+  --ring: #2d7a3e;
+  --chart-1: #2d7a3e; /* Agricultural Green */
+  --chart-2: #4caf50; /* Field Green */
+  --chart-3: #6b5b45; /* Earth Brown */
+  --chart-4: #8bc34a; /* Light Green */
+  --chart-5: #a5d6a7; /* Lighter Green */
+  --radius: 0.625rem;
+  --sidebar: #1f2317; /* Deep earth brown sidebar */
+  --sidebar-foreground: oklch(1 0 0);
+  --sidebar-primary: #4caf50; /* Field Green */
+  --sidebar-primary-foreground: #1f2317;
+  --sidebar-accent: #2d7a3e; /* Agricultural Green */
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: #3d3d37;
+  --sidebar-ring: #4caf50;
+}
+
+.dark {
+  --background: #0f1410; /* Very dark background */
+  --foreground: #e8ebe5; /* Light text */
+  --card: #1a1e17; /* Dark card */
+  --card-foreground: #e8ebe5;
+  --popover: #1a1e17;
+  --popover-foreground: #e8ebe5;
+  --primary: #66bb6a; /* Bright Green for dark mode */
+  --primary-foreground: #0f1410;
+  --secondary: #a5d6a7; /* Light green */
+  --secondary-foreground: #0f1410;
+  --muted: #323a2e;
+  --muted-foreground: #8a9781;
+  --accent: #81c784; /* Bright accent green */
+  --accent-foreground: #0f1410;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #e8ebe5;
+  --border: #2a3123;
+  --input: #161b14;
+  --ring: #66bb6a;
+  --chart-1: #66bb6a; /* Bright Green */
+  --chart-2: #81c784; /* Accent Green */
+  --chart-3: #a5d6a7; /* Light Green */
+  --chart-4: #4caf50; /* Medium Green */
+  --chart-5: #66bb6a; /* Medium-Light Green */
+  --sidebar: #141814; /* Very dark sidebar */
+  --sidebar-foreground: #e8ebe5;
+  --sidebar-primary: #81c784; /* Bright accent green */
+  --sidebar-primary-foreground: #141814;
+  --sidebar-accent: #66bb6a; /* Bright green */
+  --sidebar-accent-foreground: #141814;
+  --sidebar-border: #262b23;
+  --sidebar-ring: #81c784;
+}
+
+@theme inline {
+  --font-sans: "Inter", "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    @apply bg-background text-foreground min-h-dvh;
+  }
+}

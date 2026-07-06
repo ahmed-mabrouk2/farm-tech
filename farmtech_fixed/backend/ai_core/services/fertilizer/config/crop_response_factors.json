@@ -1,0 +1,22 @@
+{
+    "wheat": 1.0,
+    "maize": 1.2,
+    "rice": 1.0,
+    "barley": 0.9,
+    "potato": 0.8,
+    "tomato": 0.85,
+    "onion": 0.7,
+    "cucumber": 0.75,
+    "orange": 0.6,
+    "mango": 0.6,
+    "date": 0.5,
+    "grapes": 0.55,
+    "cotton": 0.8,
+    "sugarbeet": 0.85,
+    "sugarcane": 0.9,
+    "faba": 0.1,
+    "lentil": 0.1,
+    "chickpea": 0.1,
+    "clover": 0.05,
+    "default": 0.5
+}

@@ -1,0 +1,153 @@
+{
+  "wheat": {
+    "applications": 3,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",     "pct": 0.20},
+      {"dap": 25, "label": "Tillering", "pct": 0.40},
+      {"dap": 55, "label": "Heading",   "pct": 0.40}
+    ]
+  },
+  "rice": {
+    "applications": 3,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",            "pct": 0.30},
+      {"dap": 20, "label": "Active Tillering",  "pct": 0.40},
+      {"dap": 45, "label": "Panicle",           "pct": 0.30}
+    ]
+  },
+  "maize": {
+    "applications": 3,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",    "pct": 0.30},
+      {"dap": 30, "label": "Knee-high","pct": 0.40},
+      {"dap": 60, "label": "Tassel",   "pct": 0.30}
+    ]
+  },
+  "barley": {
+    "applications": 2,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",     "pct": 0.40},
+      {"dap": 30, "label": "Tillering", "pct": 0.60}
+    ]
+  },
+  "potato": {
+    "applications": 3,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",          "pct": 0.30},
+      {"dap": 25, "label": "Vegetative",     "pct": 0.40},
+      {"dap": 50, "label": "Tuber Initiation","pct": 0.30}
+    ]
+  },
+  "tomato": {
+    "applications": 3,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",      "pct": 0.25},
+      {"dap": 25, "label": "Vegetative", "pct": 0.40},
+      {"dap": 50, "label": "Fruiting",   "pct": 0.35}
+    ]
+  },
+  "onion": {
+    "applications": 3,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",    "pct": 0.30},
+      {"dap": 30, "label": "Vegetative","pct": 0.40},
+      {"dap": 60, "label": "Bulbing",  "pct": 0.30}
+    ]
+  },
+  "cucumber": {
+    "applications": 3,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",      "pct": 0.30},
+      {"dap": 20, "label": "Vegetative", "pct": 0.40},
+      {"dap": 40, "label": "Fruiting",   "pct": 0.30}
+    ]
+  },
+  "orange": {
+    "applications": 3,
+    "schedule": [
+      {"dap": 0,   "label": "Pre-Bloom",   "pct": 0.30},
+      {"dap": 60,  "label": "Fruit Set",   "pct": 0.40},
+      {"dap": 120, "label": "Fruit Fill",  "pct": 0.30}
+    ]
+  },
+  "mango": {
+    "applications": 2,
+    "schedule": [
+      {"dap": 0,  "label": "Pre-Flowering", "pct": 0.50},
+      {"dap": 60, "label": "Fruit Set",     "pct": 0.50}
+    ]
+  },
+  "date": {
+    "applications": 2,
+    "schedule": [
+      {"dap": 0,   "label": "Kimri Start",  "pct": 0.50},
+      {"dap": 90,  "label": "Khalal",       "pct": 0.50}
+    ]
+  },
+  "grapes": {
+    "applications": 3,
+    "schedule": [
+      {"dap": 0,  "label": "Bud Break",  "pct": 0.30},
+      {"dap": 30, "label": "Bloom",      "pct": 0.40},
+      {"dap": 60, "label": "Veraison",   "pct": 0.30}
+    ]
+  },
+  "cotton": {
+    "applications": 3,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",             "pct": 0.20},
+      {"dap": 30, "label": "Squaring",          "pct": 0.40},
+      {"dap": 60, "label": "Boll Development",  "pct": 0.40}
+    ]
+  },
+  "sugarbeet": {
+    "applications": 2,
+    "schedule": [
+      {"dap": 0,   "label": "Basal",       "pct": 0.40},
+      {"dap": 60,  "label": "Root Bulking","pct": 0.60}
+    ]
+  },
+  "sugarcane": {
+    "applications": 3,
+    "schedule": [
+      {"dap": 0,   "label": "Basal",       "pct": 0.25},
+      {"dap": 60,  "label": "Tillering",   "pct": 0.45},
+      {"dap": 150, "label": "Grand Growth","pct": 0.30}
+    ]
+  },
+  "faba": {
+    "applications": 2,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",      "pct": 0.50},
+      {"dap": 35, "label": "Vegetative", "pct": 0.50}
+    ]
+  },
+  "lentil": {
+    "applications": 2,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",      "pct": 0.50},
+      {"dap": 35, "label": "Vegetative", "pct": 0.50}
+    ]
+  },
+  "chickpea": {
+    "applications": 2,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",      "pct": 0.50},
+      {"dap": 40, "label": "Vegetative", "pct": 0.50}
+    ]
+  },
+  "clover": {
+    "applications": 2,
+    "schedule": [
+      {"dap": 0,  "label": "Establishment", "pct": 0.60},
+      {"dap": 40, "label": "Regrowth",      "pct": 0.40}
+    ]
+  },
+  "default": {
+    "applications": 2,
+    "schedule": [
+      {"dap": 0,  "label": "Basal",     "pct": 0.50},
+      {"dap": 30, "label": "Top dress", "pct": 0.50}
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "soil_nitrogen": 0.30,
+  "soil_soc": 0.30,
+  "fertility_index": 0.20,
+  "ph_penalty": 0.10,
+  "soil_moisture": 0.10
+}

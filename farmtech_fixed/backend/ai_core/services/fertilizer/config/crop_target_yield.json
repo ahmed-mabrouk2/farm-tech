@@ -1,0 +1,102 @@
+{
+    "wheat": {
+        "target_yield_t_ha": 8.5,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "maize": {
+        "target_yield_t_ha": 10.2,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "rice": {
+        "target_yield_t_ha": 9.1,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "potato": {
+        "target_yield_t_ha": 35.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "tomato": {
+        "target_yield_t_ha": 60.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "onion": {
+        "target_yield_t_ha": 40.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "cotton": {
+        "target_yield_t_ha": 3.5,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "faba": {
+        "target_yield_t_ha": 4.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "orange": {
+        "target_yield_t_ha": 25.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "mango": {
+        "target_yield_t_ha": 15.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "date": {
+        "target_yield_t_ha": 10.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "grapes": {
+        "target_yield_t_ha": 20.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "sugarbeet": {
+        "target_yield_t_ha": 65.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "sugarcane": {
+        "target_yield_t_ha": 90.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "barley": {
+        "target_yield_t_ha": 6.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "cucumber": {
+        "target_yield_t_ha": 30.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "lentil": {
+        "target_yield_t_ha": 2.5,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "chickpea": {
+        "target_yield_t_ha": 2.8,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "clover": {
+        "target_yield_t_ha": 45.0,
+        "source": "95th_percentile",
+        "unit": "ton_per_hectare"
+    },
+    "default": {
+        "target_yield_t_ha": 10.0,
+        "source": "fallback",
+        "unit": "ton_per_hectare"
+    }
+}

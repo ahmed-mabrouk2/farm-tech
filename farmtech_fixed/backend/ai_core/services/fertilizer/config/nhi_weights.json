@@ -1,0 +1,12 @@
+{
+  "season_ndre_mean": 0.20,
+  "season_ndvi_mean": 0.15,
+  "season_evi_mean": 0.10,
+  "soil_nitrogen": 0.10,
+  "fertility_index": 0.10,
+  "soil_soc": 0.10,
+  "soil_moisture": 0.05,
+  "water_balance": 0.10,
+  "water_availability": 0.05,
+  "heat_stress": 0.05
+}

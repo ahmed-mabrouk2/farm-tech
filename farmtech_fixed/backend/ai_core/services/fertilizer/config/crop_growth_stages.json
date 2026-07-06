@@ -1,0 +1,121 @@
+{
+  "wheat": [
+    {"stage": "Emergence", "start_dap": 0, "end_dap": 20},
+    {"stage": "Tillering", "start_dap": 21, "end_dap": 45},
+    {"stage": "Heading", "start_dap": 46, "end_dap": 70},
+    {"stage": "Grain Filling", "start_dap": 71, "end_dap": 100}
+  ],
+  "rice": [
+    {"stage": "Seedling", "start_dap": 0, "end_dap": 25},
+    {"stage": "Active Tillering", "start_dap": 26, "end_dap": 55},
+    {"stage": "Panicle Initiation", "start_dap": 56, "end_dap": 85},
+    {"stage": "Ripening", "start_dap": 86, "end_dap": 120}
+  ],
+  "maize": [
+    {"stage": "Emergence", "start_dap": 0, "end_dap": 15},
+    {"stage": "Vegetative (V1-Vn)", "start_dap": 16, "end_dap": 50},
+    {"stage": "Tasseling/Silking", "start_dap": 51, "end_dap": 75},
+    {"stage": "Grain Filling", "start_dap": 76, "end_dap": 110}
+  ],
+  "barley": [
+    {"stage": "Emergence", "start_dap": 0, "end_dap": 15},
+    {"stage": "Tillering", "start_dap": 16, "end_dap": 40},
+    {"stage": "Heading", "start_dap": 41, "end_dap": 65},
+    {"stage": "Ripening", "start_dap": 66, "end_dap": 95}
+  ],
+  "potato": [
+    {"stage": "Sprouting", "start_dap": 0, "end_dap": 20},
+    {"stage": "Vegetative", "start_dap": 21, "end_dap": 40},
+    {"stage": "Tuber Initiation", "start_dap": 41, "end_dap": 60},
+    {"stage": "Tuber Bulking", "start_dap": 61, "end_dap": 100}
+  ],
+  "tomato": [
+    {"stage": "Seedling", "start_dap": 0, "end_dap": 25},
+    {"stage": "Vegetative", "start_dap": 26, "end_dap": 45},
+    {"stage": "Flowering", "start_dap": 46, "end_dap": 65},
+    {"stage": "Fruiting/Harvest", "start_dap": 66, "end_dap": 110}
+  ],
+  "onion": [
+    {"stage": "Seedling", "start_dap": 0, "end_dap": 30},
+    {"stage": "Vegetative", "start_dap": 31, "end_dap": 60},
+    {"stage": "Bulbing", "start_dap": 61, "end_dap": 90},
+    {"stage": "Maturation", "start_dap": 91, "end_dap": 120}
+  ],
+  "cucumber": [
+    {"stage": "Seedling", "start_dap": 0, "end_dap": 15},
+    {"stage": "Vegetative", "start_dap": 16, "end_dap": 35},
+    {"stage": "Flowering", "start_dap": 36, "end_dap": 50},
+    {"stage": "Harvest", "start_dap": 51, "end_dap": 80}
+  ],
+  "orange": [
+    {"stage": "Bud Break", "start_dap": 0, "end_dap": 30},
+    {"stage": "Flowering", "start_dap": 31, "end_dap": 60},
+    {"stage": "Fruit Set", "start_dap": 61, "end_dap": 120},
+    {"stage": "Fruit Maturation", "start_dap": 121, "end_dap": 300}
+  ],
+  "mango": [
+    {"stage": "Panicle Emergence", "start_dap": 0, "end_dap": 30},
+    {"stage": "Flowering", "start_dap": 31, "end_dap": 60},
+    {"stage": "Fruit Set", "start_dap": 61, "end_dap": 90},
+    {"stage": "Fruit Development", "start_dap": 91, "end_dap": 150}
+  ],
+  "date": [
+    {"stage": "Hababouk", "start_dap": 0, "end_dap": 30},
+    {"stage": "Kimri", "start_dap": 31, "end_dap": 120},
+    {"stage": "Khalal", "start_dap": 121, "end_dap": 150},
+    {"stage": "Rutab/Tamar", "start_dap": 151, "end_dap": 180}
+  ],
+  "grapes": [
+    {"stage": "Bud Break", "start_dap": 0, "end_dap": 20},
+    {"stage": "Bloom", "start_dap": 21, "end_dap": 50},
+    {"stage": "Veraison", "start_dap": 51, "end_dap": 80},
+    {"stage": "Harvest", "start_dap": 81, "end_dap": 120}
+  ],
+  "cotton": [
+    {"stage": "Emergence", "start_dap": 0, "end_dap": 15},
+    {"stage": "Squaring", "start_dap": 16, "end_dap": 45},
+    {"stage": "Flowering/Boll Development", "start_dap": 46, "end_dap": 90},
+    {"stage": "Boll Opening", "start_dap": 91, "end_dap": 140}
+  ],
+  "sugarbeet": [
+    {"stage": "Emergence", "start_dap": 0, "end_dap": 20},
+    {"stage": "Canopy Development", "start_dap": 21, "end_dap": 60},
+    {"stage": "Root Bulking", "start_dap": 61, "end_dap": 120},
+    {"stage": "Sugar Accumulation", "start_dap": 121, "end_dap": 180}
+  ],
+  "sugarcane": [
+    {"stage": "Germination", "start_dap": 0, "end_dap": 45},
+    {"stage": "Tillering", "start_dap": 46, "end_dap": 120},
+    {"stage": "Grand Growth", "start_dap": 121, "end_dap": 250},
+    {"stage": "Maturation", "start_dap": 251, "end_dap": 360}
+  ],
+  "faba": [
+    {"stage": "Emergence", "start_dap": 0, "end_dap": 15},
+    {"stage": "Vegetative", "start_dap": 16, "end_dap": 40},
+    {"stage": "Flowering", "start_dap": 41, "end_dap": 65},
+    {"stage": "Pod Fill", "start_dap": 66, "end_dap": 100}
+  ],
+  "lentil": [
+    {"stage": "Emergence", "start_dap": 0, "end_dap": 15},
+    {"stage": "Vegetative", "start_dap": 16, "end_dap": 45},
+    {"stage": "Flowering", "start_dap": 46, "end_dap": 70},
+    {"stage": "Maturation", "start_dap": 71, "end_dap": 100}
+  ],
+  "chickpea": [
+    {"stage": "Emergence", "start_dap": 0, "end_dap": 15},
+    {"stage": "Vegetative", "start_dap": 16, "end_dap": 50},
+    {"stage": "Flowering", "start_dap": 51, "end_dap": 80},
+    {"stage": "Pod Development", "start_dap": 81, "end_dap": 110}
+  ],
+  "clover": [
+    {"stage": "Seedling", "start_dap": 0, "end_dap": 20},
+    {"stage": "Vegetative", "start_dap": 21, "end_dap": 60},
+    {"stage": "First Cut", "start_dap": 61, "end_dap": 80},
+    {"stage": "Regrowth", "start_dap": 81, "end_dap": 150}
+  ],
+  "default": [
+    {"stage": "Early Growth", "start_dap": 0, "end_dap": 30},
+    {"stage": "Active Growth", "start_dap": 31, "end_dap": 70},
+    {"stage": "Maturation", "start_dap": 71, "end_dap": 120}
+  ]
+}
