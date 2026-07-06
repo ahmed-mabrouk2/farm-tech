@@ -73,8 +73,8 @@ export const extraTranslations = {
         uploadDesc: 'Upload a photo for AI disease detection',
         chatLabel: 'Chat with AI Assistant',
         chatDesc: 'Get personalized farming advice',
-        simulateLabel: 'Simulate Crop Scenario',
-        simulateDesc: 'Run prediction models for crop scenarios',
+        simulateLabel: 'Crop Rotation Sequence',
+        simulateDesc: 'Optimize crop sequences using AI policy',
       },
       chat: {
         openAria: 'Open chat',
@@ -589,8 +589,8 @@ export const extraTranslations = {
         uploadDesc: 'ارفع صورة لكشف الأمراض بالذكاء الاصطناعي',
         chatLabel: 'محادثة المساعد الذكي',
         chatDesc: 'احصل على نصائح زراعية مخصصة',
-        simulateLabel: 'محاكاة سيناريو محصول',
-        simulateDesc: 'شغّل نماذج التوقع لسيناريوهات المحاصيل',
+        simulateLabel: 'الدورة الزراعية وتعاقب المحاصيل',
+        simulateDesc: 'تخطيط الدورة الزراعية المثلى بالذكاء الاصطناعي',
       },
       chat: {
         openAria: 'فتح المحادثة',

@@ -74,8 +74,8 @@ export default function AIModelsPage() {
     },
     {
       id: "scenario-simulator",
-      title: isAr ? "محاكاة سيناريو محصول" : "Crop Scenario Simulation",
-      description: isAr ? "شغل نماذج التوقع لسيناريوهات المحاصيل" : "Run prediction models for crop scenarios",
+      title: isAr ? "الدورة الزراعية (تعاقب المحاصيل)" : "Crop Rotation Sequence",
+      description: isAr ? "استخدام الذكاء الاصطناعي لتخطيط الدورة الزراعية المثلى للحفاظ على صحة التربة وزيادة الأرباح" : "Optimize crop sequences to maintain soil health and maximize profit using AI",
       icon: <Brain className="w-8 h-8" />,
       color: "bg-purple-100 dark:bg-purple-950",
     },

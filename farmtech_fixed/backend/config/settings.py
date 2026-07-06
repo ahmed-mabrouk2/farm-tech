@@ -129,7 +129,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 #   1. DATABASE_URL env var  (Docker / Heroku style)
 #   2. DB_ENGINE=postgresql  only if psycopg2 is actually importable
 #   3. SQLite fallback       always works locally
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres.ymjxxzihlhjmbhsmkygu:ABDO199218ABDO@aws-0-eu-west-3.pooler.supabase.com:5432/postgres")
+DATABASE_URL = os.getenv("DATABASE_URL", "")
 DB_ENGINE    = os.getenv("DB_ENGINE", "")
 
 def _use_postgres():
