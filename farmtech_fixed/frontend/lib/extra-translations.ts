@@ -419,7 +419,12 @@ export const extraTranslations = {
       subtitle: "Audit timeline of user actions, sensors triggers and model predictions",
       timelineTitle: "Historical Timeline",
       loadMore: "Load More Activities",
-      stats: "Activity Statistics",
+      stats: [
+        "Total Activities",
+        "This Month",
+        "This Week",
+        "Today"
+      ],
     },
     helpSupport: {
       title: "Help & Support Center",
@@ -930,7 +935,12 @@ export const extraTranslations = {
       subtitle: "خط زمني لعمليات المستخدم، تنبيهات المستشعرات، وتوقعات النماذج",
       timelineTitle: "الخط الزمني التاريخي",
       loadMore: "تحميل المزيد من الأنشطة",
-      stats: "إحصاءات الأنشطة",
+      stats: [
+        "إجمالي الأنشطة",
+        "هذا الشهر",
+        "هذا الأسبوع",
+        "اليوم"
+      ],
     },
     helpSupport: {
       title: "مركز المساعدة والدعم",
