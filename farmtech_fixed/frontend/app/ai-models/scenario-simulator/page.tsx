@@ -82,7 +82,47 @@ export default function CropRotationPage() {
     if (clean === 'sugarcane') return isAr ? 'قصب السكر' : 'Sugarcane'
     if (clean === 'berseem' || clean === 'clover') return isAr ? 'البرسيم' : 'Berseem/Clover'
     if (clean === 'fallow') return isAr ? 'أرض بور (راحة)' : 'Fallow'
+    if (clean === 'vegfor' || clean === 'vegetables') return isAr ? 'الخضار' : 'Vegetables'
+    if (clean === 'onion') return isAr ? 'البصل' : 'Onion'
+    if (clean === 'garlic') return isAr ? 'الثوم' : 'Garlic'
+    if (clean === 'carrot') return isAr ? 'الجزر' : 'Carrot'
+    if (clean === 'sunflower') return isAr ? 'عباد الشمس' : 'Sunflower'
+    if (clean === 'sorghum') return isAr ? 'الذرة الرفيعة' : 'Sorghum'
+    if (clean === 'lentil' || clean === 'lentils') return isAr ? 'العدس' : 'Lentils'
     return crop.charAt(0).toUpperCase() + crop.slice(1)
+  }
+
+  // Returns cultivation duration in months for each crop
+  const getCropMonths = (crop: string): string => {
+    const clean = crop.trim().toLowerCase()
+    const months: Record<string, number> = {
+      wheat: 5,
+      corn: 4,
+      maize: 4,
+      cotton: 6,
+      rice: 4,
+      tomato: 3,
+      potato: 3,
+      barley: 4,
+      soybeans: 4,
+      sugarcane: 12,
+      berseem: 2,
+      clover: 2,
+      fallow: 0,
+      vegfor: 2,
+      vegetables: 2,
+      onion: 5,
+      garlic: 6,
+      carrot: 3,
+      sunflower: 4,
+      sorghum: 4,
+      lentil: 4,
+      lentils: 4,
+    }
+    const m = months[clean]
+    if (m === undefined) return isAr ? 'غير محدد' : 'N/A'
+    if (m === 0) return isAr ? 'راحة' : 'Rest'
+    return isAr ? `${m} شهور` : `${m} mo.`
   }
 
   const translateMetricKey = (key: string) => {
@@ -364,6 +404,7 @@ export default function CropRotationPage() {
                             <tr className="border-b border-slate-100 dark:border-slate-800">
                               <th className="py-3 px-4 text-start text-xs font-semibold text-slate-500 uppercase tracking-wider">{isAr ? "الموسم" : "Season"}</th>
                               <th className="py-3 px-4 text-start text-xs font-semibold text-slate-500 uppercase tracking-wider">{isAr ? "المحصول الموصى به" : "Recommended Crop"}</th>
+                              <th className="py-3 px-4 text-start text-xs font-semibold text-slate-500 uppercase tracking-wider">{isAr ? "مدة الزراعة" : "Duration"}</th>
                               <th className="py-3 px-4 text-start text-xs font-semibold text-slate-500 uppercase tracking-wider">{isAr ? "الربح (جنيه)" : "Profit (EGP)"}</th>
                               <th className="py-3 px-4 text-start text-xs font-semibold text-slate-500 uppercase tracking-wider">{isAr ? "مياه (مم)" : "Water (mm)"}</th>
                               <th className="py-3 px-4 text-start text-xs font-semibold text-slate-500 uppercase tracking-wider">{isAr ? "سماد (كجم)" : "Fertilizer (kg)"}</th>
@@ -374,6 +415,11 @@ export default function CropRotationPage() {
                               <tr key={idx} className="border-b border-slate-50 dark:border-slate-800/50 hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
                                 <td className="py-4 px-4 text-sm font-semibold text-slate-900 dark:text-white">{isAr ? `الموسم ${item.Season}` : `Season ${item.Season}`}</td>
                                 <td className="py-4 px-4 text-sm font-medium text-emerald-600 dark:text-emerald-400">{translateCrop(item["Recommended Crop"])}</td>
+                                <td className="py-4 px-4 text-sm text-slate-600 dark:text-slate-300">
+                                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-purple-50 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 text-xs font-semibold border border-purple-100 dark:border-purple-900">
+                                    {getCropMonths(item["Recommended Crop"])}
+                                  </span>
+                                </td>
                                 <td className="py-4 px-4 text-sm text-slate-600 dark:text-slate-300 font-mono">{item["Est. Profit (EGP)"]}</td>
                                 <td className="py-4 px-4 text-sm text-slate-600 dark:text-slate-300 font-mono">{item["Water (mm)"]}</td>
                                 <td className="py-4 px-4 text-sm text-slate-600 dark:text-slate-300 font-mono">{item["Fertilizer (kg)"]}</td>
