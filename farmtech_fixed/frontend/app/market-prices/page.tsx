@@ -81,7 +81,8 @@ export default function MarketPricesPage() {
     setForecastError(null)
     try {
       const raw = await fetchForecast(selectedCommodity)
-      const formatted: ForecastPoint[] = raw.map((p) => ({
+      const forecastArray = Array.isArray(raw) ? raw : (raw.forecast || [])
+      const formatted: ForecastPoint[] = forecastArray.map((p: any) => ({
         ...p,
         label: quarterLabel(p.year, p.quarter),
       }))
